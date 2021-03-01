@@ -1,9 +1,6 @@
 package banking.testCases;
 
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -16,13 +13,17 @@ import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.beust.jcommander.Parameter;
+
+import banking.utilities.ReadConfig;
 
 
 public class BaseClass {
-	public String baseURL="http://demo.guru99.com/V1/index.php";
-	public String username = "mngr136913";
-	public String password = "abc321!";
+	
+	ReadConfig readconfig=new ReadConfig();
+	
+	public String baseURL=readconfig.getApplicationURL();
+	public String username = readconfig.getUsername();
+	public String password = readconfig.getPassword();
 	public static WebDriver driver;
 	public static Logger logger;
 	public ExtentReports extent;
@@ -34,15 +35,15 @@ public class BaseClass {
 		PropertyConfigurator.configure("Log4j.properties");
 		
 		if(br.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",readconfig.getChromepath());
 			driver = new ChromeDriver();
 		}
 		else if(br.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"//Drivers//geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver",readconfig.getFirefoxpath());
 			driver = new FirefoxDriver();
 		}
 		else if(br.equals("edge")) {
-			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"//Drivers//msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver",readconfig.getEdgepath());
 			driver = new EdgeDriver();
 		}
 		

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="BankingTestProject" duration-ms="10786" started-at="2021-02-18T12:36:59Z" finished-at="2021-02-18T12:37:09Z">
+  <suite name="BankingTestProject" duration-ms="8052" started-at="2021-03-01T14:02:45Z" finished-at="2021-03-01T14:02:53Z">
     <groups>
     </groups>
-    <test name="Banking App Test" duration-ms="10786" started-at="2021-02-18T12:36:59Z" finished-at="2021-02-18T12:37:09Z">
+    <test name="Banking App Test" duration-ms="8052" started-at="2021-03-01T14:02:45Z" finished-at="2021-03-01T14:02:53Z">
       <class name="banking.testCases.TC_LoginTest_001">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:banking.testCases.TC_LoginTest_001@45f45fa1]" name="setup" is-config="true" duration-ms="1831" started-at="2021-02-18T18:06:59Z" finished-at="2021-02-18T18:07:00Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:banking.testCases.TC_LoginTest_001@45f45fa1]" name="setup" is-config="true" duration-ms="1604" started-at="2021-03-01T19:32:45Z" finished-at="2021-03-01T19:32:47Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:banking.testCases.TC_LoginTest_001@45f45fa1]" name="loginTest" duration-ms="7700" started-at="2021-02-18T18:07:00Z" finished-at="2021-02-18T18:07:08Z">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:banking.testCases.TC_LoginTest_001@45f45fa1]" name="loginTest" duration-ms="5411" started-at="2021-03-01T19:32:47Z" finished-at="2021-03-01T19:32:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:banking.testCases.TC_LoginTest_001@45f45fa1]" name="tearDown" is-config="true" duration-ms="1244" started-at="2021-02-18T18:07:08Z" finished-at="2021-02-18T18:07:09Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:banking.testCases.TC_LoginTest_001@45f45fa1]" name="tearDown" is-config="true" duration-ms="1028" started-at="2021-03-01T19:32:52Z" finished-at="2021-03-01T19:32:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
