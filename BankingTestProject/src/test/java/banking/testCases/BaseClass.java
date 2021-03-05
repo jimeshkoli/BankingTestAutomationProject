@@ -1,6 +1,9 @@
 package banking.testCases;
 
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -31,7 +34,7 @@ public class BaseClass {
 	@Parameters("browser")
 	@BeforeClass
 	public void setup(String br) {		
-		logger = Logger.getLogger("banking");
+		//logger = Logger.getLogger("banking");
 		PropertyConfigurator.configure("Log4j.properties");
 		
 		if(br.equals("chrome")) {
@@ -47,16 +50,18 @@ public class BaseClass {
 			driver = new EdgeDriver();
 		}
 		
-		//Time stamp for each report 
-		//String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-		//String repName = "Test Report-"+timeStamp+".html";
+		//Time stamp for each report for Store the history of all the reports
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String repName = "Test Report-"+timeStamp+".html";
 		
 		
 		//Report Method
-		extent = new ExtentReports();
-		ExtentSparkReporter spark = new ExtentSparkReporter("MyReport.html");
+		
+		ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+ "/test-outout/"+repName);
 		spark.config().setDocumentTitle("Automation Test Report");
 		spark.config().setReportName("Test Report");
+		
+		extent = new ExtentReports();
 		extent.attachReporter(spark);
 	}
 	

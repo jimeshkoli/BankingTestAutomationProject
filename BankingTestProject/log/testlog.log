@@ -50,3 +50,15 @@
 2021-02-18 18:07:06,695 - banking -INFO - Entered Username
 2021-02-18 18:07:06,755 - banking -INFO - Entered Password
 2021-02-18 18:07:08,548 - banking -INFO - Login Test passed
+2021-03-01 18:35:53,892 - banking -INFO - URL is opened
+2021-03-01 18:35:54,058 - banking -INFO - Entered Username
+2021-03-01 18:35:54,116 - banking -INFO - Entered Password
+2021-03-01 18:35:55,963 - banking -INFO - Login Test passed
+2021-03-01 19:32:50,646 - banking -INFO - URL is opened
+2021-03-01 19:32:50,798 - banking -INFO - Entered Username
+2021-03-01 19:32:50,856 - banking -INFO - Entered Password
+2021-03-01 19:32:52,523 - banking -INFO - Login Test passed
+2021-03-02 21:32:07,340 - banking -INFO - URL is opened
+2021-03-02 21:32:07,791 - banking -INFO - Entered Username
+2021-03-02 21:32:07,852 - banking -INFO - Entered Password
+2021-03-02 21:32:09,629 - banking -INFO - Login Test passed

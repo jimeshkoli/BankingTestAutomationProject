@@ -17,16 +17,16 @@ public class TC_LoginTest_001 extends BaseClass{
 		
 		ExtentTest test = extent.createTest("Login Test").assignAuthor("Jimeshk").assignCategory("Smoke Testing").assignDevice("Browser Testing");
 		driver.get(baseURL);
-		logger.info("URL is opened");
+		//logger.info("URL is opened");
 		test.info("URL is opened");
 		LoginPage lp = new LoginPage(driver); 
 		
 		lp.setUsername(username);
-		logger.info("Entered Username");
+		//logger.info("Entered Username");
 		test.info("Entered Username");
 		
 		lp.setPassword(password);
-		logger.info("Entered Password");
+		//logger.info("Entered Password");
 		test.info("Entered Password");
 		
 		lp.clickSubmit();
@@ -35,12 +35,12 @@ public class TC_LoginTest_001 extends BaseClass{
 		
 		if(driver.getTitle().equals("GTPL Bank Manager HomePage")) {
 			Assert.assertTrue(true);
-			logger.info("Login Test passed");
+			//logger.info("Login Test passed");
 			test.pass("Login Test passed");
 		}
 		else {
 			Assert.assertTrue(false);
-			logger.info("Login Test failed");
+			//logger.info("Login Test failed");
 			test.fail("Login Test failed");
 		}
 	}	
